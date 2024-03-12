@@ -1,0 +1,72 @@
+---
+import "../styles/global.css";
+
+const images = [
+  "https://slicing-hima.netlify.app/images/galeri/pembelajaran2.jpg",
+  "https://slicing-hima.netlify.app/images/galeri/pembelajaran4.jpg",
+  "https://slicing-hima.netlify.app/images/galeri/pembelajaran3.jpg",
+  "https://slicing-hima.netlify.app/images/galeri/pembelajaran1.jpg",
+];
+---
+
+<script>
+  const carousel = document.querySelector(".carrosell") as HTMLDivElement;
+  const slides = document.querySelector(".slides") as HTMLDivElement;
+
+  let currentSlide = 0;
+  const imageCount = slides.querySelectorAll(`img`).length;
+
+  function showSlide(n: number) {
+    slides.style.transform = `translateX(-${n * 100}%)`;
+    currentSlide = n;
+  }
+
+  showSlide(0);
+
+  // Navigasi carousel
+
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  prevBtn?.addEventListener("click", () => {
+    showSlide(currentSlide === 0 ? imageCount - 1 : currentSlide - 1);
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    showSlide(currentSlide === imageCount - 1 ? 0 : currentSlide + 1 );
+  });
+
+  // Autoplay (opsional)
+
+  setInterval(() => {
+    showSlide(currentSlide === imageCount - 1 ? 0 : currentSlide + 1);
+  }, 3000);
+</script>
+
+<div class="carrosell">
+  <div class="slides">
+    {images.map((image) => <img src={image} alt="Pembelajaran" />)}
+  </div>
+</div>
+
+<style>
+  .carrosell {
+    width: 100%;
+    height: 500px;
+    overflow-x: hidden;
+  }
+
+  .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
