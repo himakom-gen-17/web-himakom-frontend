@@ -1,3 +1,128 @@
 ---
 import "../styles/global.css";
 ---
+
+<nav class="navbar">
+  <div class="container">
+    <div class="branding">
+      <img src="logo.png" alt="logo-himakom" />
+      <span>HIMAKOM</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">HOME</a></li>
+      <li>
+        <a href="#">ABOUT</a>
+        <ul class="drop-about">
+          <li><a href="#">PROFIL</a></li>
+          <li>
+            <a href="#">DIVISI</a>
+            <ul class="drop-divisi">
+              <li><a href="#">PROGRAM</a></li>
+              <li><a href="#">DESAIN</a></li>
+              <li><a href="#">JARINGAN</a></li>
+            </ul>
+          </li>
+          <li><a href="#">GENERASI</a></li>
+          <li><a href="#">ANGGOTA</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">ARTIKEL</a></li>
+      <li><a href="#">GALERI</a></li>
+      <li><a href="#" class="login">LOG IN</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    width: 100%;
+    box-shadow: 0 4px 2px #b23939;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .branding img {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+  }
+
+  .branding span {
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(to right, #b23939, #4c1818);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    margin: 5px;
+    font-size: 25px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .nav-links li a:hover {
+    color: #B23939;
+  }
+
+  .nav-links .login {
+    background-color: #b23939;
+    color: #fff !important;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+
+  .nav-links li:nth-child(2) {
+    position: relative;
+  }
+
+  .drop-about{
+    display: none;
+    position: absolute;
+    border: solid #000 1px;
+    background-color: #fff;
+    border-radius: 5px;
+    list-style: none;
+  }
+
+  .drop-about a{
+    padding: 8px 16px;
+  }
+  .nav-links > li:nth-child(2):hover .drop-about, .drop-about > li:nth-child(2):hover .drop-divisi {
+    display: block;
+  }
+
+  .drop-divisi {
+    display: none;
+    position: absolute;
+    border: solid #000 1px;
+    background-color: #fff;
+    border-radius: 5px;
+    list-style: none;
+    top: -50%;
+    right: -100%;
+  }
+
+</style>
