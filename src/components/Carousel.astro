@@ -33,7 +33,7 @@ const images = [
   });
 
   nextBtn?.addEventListener("click", () => {
-    showSlide(currentSlide === imageCount - 1 ? 0 : currentSlide + 1 );
+    showSlide(currentSlide === imageCount - 1 ? 0 : currentSlide + 1);
   });
 
   // Autoplay (opsional)
@@ -45,22 +45,40 @@ const images = [
 
 <div class="carrosell">
   <div class="slides">
-    {images.map((image) => <img src={image} alt="Pembelajaran" />)}
+    {
+      images.map((image) => (
+        <>
+          <img src={image} alt="Pembelajaran" />
+          <div class="text-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+              voluptas
+            </p>
+          </div>
+        </>
+      ))
+    }
+    <div class="text-content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+        voluptas
+      </p>
+    </div>
   </div>
 </div>
 
 <style>
   .carrosell {
     width: 100%;
-    height: 500px;
+    height: 100%;
     overflow-x: hidden;
   }
 
   .slides {
     display: flex;
+    position: relative;
     width: 100%;
     height: 100%;
-    gap: 16px;
     transition: transform 0.5s ease-in-out;
   }
 
@@ -68,5 +86,13 @@ const images = [
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 </style>
