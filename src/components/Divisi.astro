@@ -2,11 +2,166 @@
 import "../styles/global.css";
 ---
 
-<div class="divisi">
+<section class="divisi">
+  <!-- Title Content -->
+  <div class="title">
+    <span></span>
+    <h1 class="section-title">DIVISI HIMAKOM</h1>
+    <span></span>
+  </div>
+  <!-- Title Content End -->
 
+  <!-- Card Content -->
+  <div class="container-divisi">
+    <a href="#" class="container-design">
+      <div class="card-img-divisi">
+        <img
+          src="https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+      <div class="card-body-divisi">
+        <h3 class="title-card-divisi">Program</h3>
+        <div class="card-detail-divisi">
+          <p>
+            Divisi program merupakan salah satu divisi Himakom, yang berporos pada ilmu-ilmu pemrograman.
+          </p>
+        </div>
+      </div>
+    </a>
 
-</div>
+    <a href="#" class="container-program">
+      <div class="card-img-divisi">
+        <img
+          src="https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+      <div class="card-body-divisi">
+        <h3 class="title-card-divisi">Program</h3>
+        <div class="card-detail-divisi">
+          <p>
+            Divisi Jaringan merupakan salah satu divisi Himakom, yang berporos pada ilmu-ilmu Networking.
+          </p>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="container-jaringan">
+      <div class="card-img-divisi">
+        <img
+          src="https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+      <div class="card-body-divisi">
+        <h3 class="title-card-divisi">Desain</h3>
+        <div class="card-detail-divisi">
+          <p>
+            Divisi Desain merupakan salah satu divisi Himakom, yang berporos pada ilmu-ilmu Desain dan Vektor.
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- Card Content End -->
+</section>
 
 <style>
-    
+  .divisi {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 24px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    gap: 50px;
+  }
+
+  .title span {
+    background-color: #730000;
+    width: 11rem;
+    height: 1rem;
+    border-radius: 3px;
+  }
+
+  .title h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .container-divisi {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .container-divisi a {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    margin: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+  }
+
+  .container-divisi a:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+
+  .card-img-divisi {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-img-divisi img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .container-divisi a .card-body-divisi {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    color: white;
+    background: rgb(195, 34, 51);
+    background: linear-gradient(
+      0deg,
+      rgba(195, 34, 51, 1) 0%,
+      rgba(253, 187, 45, 0) 100%
+    );
+    z-index: 0;
+  }
+
+  .card-body-divisi {
+    color: white;
+    margin-top: 1.2rem;
+  }
+
+  .card-body-divisi h3 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .card-body-divisi p {
+    font-size: 12px;
+  }
+
 </style>
