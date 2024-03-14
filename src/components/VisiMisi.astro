@@ -5,85 +5,75 @@ import "../styles/global.css";
 <section class="profil">
   <div class="wrapper">
     <div class="card">
-          <h2 class="visi">VISI</h2>
-            <div class="card-body">
-                <p>Menjadikan Organisasi Himakom sebagai wadah untuk saling bertukar pikiran</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="misi">MISI</h2>
-            <div class="card-misi">
-                <p>Menjadikan organisasi Himakom sebagai wadah untuk saling bertukar pikiran</p>
-            </div>
-        </div>
-
-
+      <h2 class="visi">VISI</h2>
+      <div class="card-visi">
+        <p class="text">
+          Menjadikan Organisasi Himakom <br /> sebagai wadah untuk saling bertukar
+          pikiran
+        </p>
+      </div>
     </div>
+
+    <div class="card">
+      <h2 class="misi">MISI</h2>
+      <div class="card-misi">
+        <p class="text">
+          Menjadikan organisasi Himakom <br /> sebagai wadah untuk saling bertukar
+          pikiran
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
-    .profil {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-      }
-      .card {
-        width: 300px;
-        height: 300px;
-    
-      }
-      .card-body {
-        margin-top: 15px;
-        border: 8px solid #3962B2 ; 
-        align-items: center;
-        bottom: 0;
-        color: black;
-        padding: 8px;
-        border-radius: 30px;
-        height: 300px;
-        width: 450px;
-      }
-      .card-misi{
-        margin-top: 15px;
-        border: 8px solid #730000 ; 
-        align-items: center;
-        bottom: 0;
-        color: black;
-        padding: 8px;
-        border-radius: 30px;
-        height: 300px;
-        width: 450px;
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .card-visi {
+    border: 8px solid #3962b2;
+    align-items: center;
+    color: black;
+    padding: 8px;
+    border-radius: 30px;
+    height: 200px;
+    width: 450px;
+  }
+  .card-misi {
+    padding-top: 15px;
+    border: 8px solid #730000;
+    align-items: center;
+    bottom: 0;
+    color: black;
+    padding: 8px;
+    border-radius: 30px;
+    height: 200px;
+    width: 450px;
+  }
 
-      }
-      .wrapper {
-        display: flex;
-       text-align: center;
-        gap: 300px;
-      }
-      
-      .visi{
-        text-align: center;
-        justify-content: center;
-        flex-direction: column;
-        border-radius: 30px;
-        padding: 15px;
-        color: white;
-        width: 450px;
-        margin-top: 30px;
-        background-color: #3962B2;
-      }
-      .misi{
-        text-align: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 30px;
-        color: white;
-        width: 450px;
-        padding: 15px;
-        border-radius: 30px;
-        background-color: #730000;
-      }
-
+  .visi {
+    text-align: center;
+    border-radius: 30px;
+    padding: 15px;
+    color: white;
+    width: 450px;
+    background-color: #3962b2;
+  }
+  .misi {
+    text-align: center;
+    color: white;
+    width: 450px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #730000;
+  }
 </style>
