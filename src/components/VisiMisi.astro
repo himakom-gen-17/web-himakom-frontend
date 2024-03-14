@@ -2,22 +2,78 @@
 import "../styles/global.css";
 ---
 
-<div class="visi-misi">
-    <div class="container">
-        <div class="card-visi">
-            <h2 class="title">VISI</h2>
-            <div class="content">
-                <p>Menjadikan Organisasi Himakom sebagai wadah untuk saling bertukar pikiran</p>
-            </div>
-        </div>
-
-        <div class="card-misi">
-            <h2 class="title">MISI</h2>
-            <div class="content">
-                <p>Menjadikan organisasi Himakom sebagai wadah untuk saling bertukar pikiran</p>
-            </div>
-        </div>
-
-
+<section class="profil">
+  <div class="wrapper">
+    <div class="card">
+      <h2 class="visi">VISI</h2>
+      <div class="card-visi">
+        <p class="text">
+          Menjadikan Organisasi Himakom <br /> sebagai wadah untuk saling bertukar
+          pikiran
+        </p>
+      </div>
     </div>
-</div>
+
+    <div class="card">
+      <h2 class="misi">MISI</h2>
+      <div class="card-misi">
+        <p class="text">
+          Menjadikan organisasi Himakom <br /> sebagai wadah untuk saling bertukar
+          pikiran
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .card-visi {
+    border: 8px solid #3962b2;
+    align-items: center;
+    color: black;
+    padding: 8px;
+    border-radius: 30px;
+    height: 200px;
+    width: 450px;
+  }
+  .card-misi {
+    padding-top: 15px;
+    border: 8px solid #730000;
+    align-items: center;
+    bottom: 0;
+    color: black;
+    padding: 8px;
+    border-radius: 30px;
+    height: 200px;
+    width: 450px;
+  }
+
+  .visi {
+    text-align: center;
+    border-radius: 30px;
+    padding: 15px;
+    color: white;
+    width: 450px;
+    background-color: #3962b2;
+  }
+  .misi {
+    text-align: center;
+    color: white;
+    width: 450px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #730000;
+  }
+</style>

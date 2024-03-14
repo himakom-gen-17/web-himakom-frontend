@@ -13,11 +13,21 @@ import Faq from "../components/Faq.astro";
 <HomeLayout>
   <header>
     <Navbar />
-    <Carousel/>
-    <VisiMisi/>
+    <Carousel />
+  </header>
+  <main>
+    <VisiMisi />
     <Divisi />
     <Generasi />
     <Faq />
     <Footer />
-  </header>
+  </main>
 </HomeLayout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+</style>
