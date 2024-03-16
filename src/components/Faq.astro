@@ -17,10 +17,10 @@ import "../styles/global.css";
    }
 </script>
 
-<header class="title col-1">
-    <span class="col-1"></span>
+<header class="title">
+    <span></span>
     <h1>FAQ</h1>
-    <span class="coi-1"></span>
+    <span class="kanan"></span>
 </header>
 <section class="container">
     <div class="content-box">
@@ -59,31 +59,34 @@ import "../styles/global.css";
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 10px;
-    gap: 19%;
+    gap: 183px;
+     }
+
+     .kanan {
+        /*  */
      }
 
     .title span {
     background-color: #730000;
-    width: 11rem;
+    width: 10rem;
     height: 1rem;
-    border-radius: 3px;
+    border-radius: 5px;
      }
 
      .container .content-box {
         position: relative;
-        margin: 10px 200px;
+        margin-top: 10px;
+        width: 776px;
+        margin-left: 275px;
      }
      
     .container .content-box .qna {
         position: relative;
-        padding: 10px;
-        font-size: 20px;
         background: #730000;
         color: white;
         cursor: pointer;
         border-radius: 10px;
+        padding: 10px;
     }
 
     .container .content-box .qna::before {
@@ -118,16 +121,15 @@ import "../styles/global.css";
     align-items: center;
     min-height: 100vh;
    }
-
-   [class*='col-']{
+    [class*='col-']{
    }
 
-   @media only screen and (max-width:900px){
+   @media only screen and (min-width:900px){
     .col-1{
         gap: 10px;
     };
-    .col-2{
-        /* width: 450px; */
+    .container .content-box {
+        margin-left: 0px;
     }
    }
 
