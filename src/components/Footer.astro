@@ -1,3 +1,179 @@
 ---
 import "../styles/global.css";
 ---
+
+<footer class="footer">
+    <div class="footer-left">
+        <div class="branding">
+            <img src="logo.png" alt="logo-himakom" />
+            <span><b>HIMAKOM</b></span>
+        </div>
+
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4677377724743!2d108.52867370943227!3d-6.712630893255126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee2197888043d%3A0x6e3589ac1bc43faf!2sStikom%20-%20Poltek%20Cirebon!5e0!3m2!1sid!2sid!4v1710563678075!5m2!1sid!2sid"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="footer-mid">
+        <form>
+            <textarea rows="4" cols="50" class="nama" placeholder="nama"></textarea>
+            <textarea rows="4" cols="50" class="pesan" placeholder="pesan"></textarea>
+        </form>
+    </div>
+    <div class="footer-right">
+        <ul class="link-left">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ARTIKEL</a></li>
+            <li><a href="#">GALERI</a></li>
+        </ul>
+        <ul class="link-right">
+            <li>
+                <a href="#">DIVISI</a>
+                <ul class="drop-div">
+                    <li><a href="#">PROGRAM</a></li>
+                    <li><a href="#">DESAIN</a></li>
+                    <li><a href="#">JARINGAN</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ABOUT</a>
+                <ul class="drop-about">
+                    <li><a href="#">PROFIL</a></li>
+                    <li><a href="#">GENERASI</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+        color: white;
+    }
+
+    .footer-left img {
+        height: 68px;
+        width: 65px;
+        margin: 5px;
+        top: 600px;
+        left: 120px;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: black;
+        padding: 20px;
+    }
+
+    .footer-left .branding {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+
+    .footer-left span {
+        padding: 6px;
+        align-items: center;
+        font-size: 40px;
+        color: #fff;
+        font-family: Poppins;
+    }
+
+    .map iframe {
+        width: 300px;
+        height: 200px;
+        padding: 5px;
+    }
+
+    .footer-mid {
+        display: flex;
+        background-color: rgb(0, 0, 0);
+        justify-content: col;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .footer-mid form {
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+        box-sizing: cover;
+        padding: 25px 5px 15px 5px;
+    }
+
+    .footer-mid form .nama {
+        text-align: justify;
+        text-indent: 10px;
+        width: 600px;
+        height: 50px;
+        resize: none;
+        font-size: 1rem;
+    }
+
+    .footer-mid form .pesan {
+        text-align: justify;
+        text-indent: 10px;
+        margin-top: 10px;
+        resize: none;
+        height: 200px;
+        font-size: 1rem;
+    }
+
+    .footer-right {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-right .link-left,
+    .footer-right .link-right {
+        text-decoration: none;
+        list-style: none;
+        padding: 10px;
+        text-align: left;
+        margin: 25px 10px;
+    }
+
+    .link-left a,
+    .link-right a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #fff;
+        padding: 3px;
+    }
+
+    .drop-about,
+    .drop-div {
+        display: none;
+        position: absolute;
+        border: solid #000 1px;
+        list-style: none;
+        padding: 3px 4px;
+        background-color: red;
+    }
+
+    .drop-about a,
+    .drop-div a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .link-right li:hover .drop-about,
+    .link-right li:hover .drop-div {
+        display: block;
+    }
+</style>
