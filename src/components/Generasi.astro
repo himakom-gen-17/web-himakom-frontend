@@ -49,7 +49,7 @@ const generasi: {
 
 <style>
   .generasi {
-    color: black;
+    color: var(--neutral-secondary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +70,7 @@ const generasi: {
   .title span {
     width: 11rem;
     height: 1rem;
-    background-color: #730000;
+    background-color: var(--primary);
     border-radius: 3px;
   }
 
@@ -95,18 +95,18 @@ const generasi: {
     height: 80px;
     background-color: transparent;
     padding: 0.5rem 1rem;
-    border: solid 1px #730000;
+    border: solid 1px var(--primary);
     border-radius: 10px;
     font-family: "Inter";
     font-weight: 700;
     font-size: 40px;
-    color: #730000;
+    color: var(--primary);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
   }
   .container a:hover,
   .container a:focus {
-    background-color: #730000;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--neutral-primary);
   }
 </style>

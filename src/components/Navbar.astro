@@ -38,7 +38,7 @@ import "../styles/global.css";
 <style>
   .navbar {
     width: 100%;
-    box-shadow: 0 4px 2px #b23939;
+    box-shadow: 0 4px 2px var(--accent);
     position: sticky;
     top: 0;
     z-index: 50;
@@ -65,7 +65,7 @@ import "../styles/global.css";
   .branding span {
     font-size: 30px;
     font-weight: bold;
-    background: linear-gradient(to right, #b23939, #4c1818);
+    background: linear-gradient(to right, var(--accent), #4c1818);
     background-clip: text;
     color: transparent;
   }
@@ -82,17 +82,17 @@ import "../styles/global.css";
     text-decoration: none;
     margin: 10px;
     font-size: 23px;
-    color: #000;
+    color: var(--neutral-secondary);
     font-weight: 600;
   }
 
   .nav-links li a:hover {
-    color: #B23939;
+    color: var(--accent);
   }
 
   .nav-links .login {
-    background-color: #b23939;
-    color: #fff !important;
+    background-color: var(--accent);
+    color: var(--neutral-primary) !important;
     padding: 5px 20px;
     border-radius: 20px;
   }
@@ -105,31 +105,31 @@ import "../styles/global.css";
     position: relative;
   }
 
-  .drop-about{
+  .drop-about {
     display: none;
     position: absolute;
-    border: solid #000 1px;
-    background-color: #fff;
+    border: solid var(--neutral-secondary) 1px;
+    background-color: var(--neutral-primary);
     border-radius: 5px;
     list-style: none;
   }
 
-  .drop-about a{
+  .drop-about a {
     padding: 8px 16px;
   }
-  .nav-links > li:nth-child(2):hover .drop-about, .drop-about > li:nth-child(2):hover .drop-divisi {
+  .nav-links > li:nth-child(2):hover .drop-about,
+  .drop-about > li:nth-child(2):hover .drop-divisi {
     display: block;
   }
 
   .drop-divisi {
     display: none;
     position: absolute;
-    border: solid #000 1px;
-    background-color: #fff;
+    border: solid var(--neutral-secondary) 1px;
+    background-color: var(--neutral-primary);
     border-radius: 5px;
     list-style: none;
     top: -50%;
     right: -100%;
   }
-
 </style>
