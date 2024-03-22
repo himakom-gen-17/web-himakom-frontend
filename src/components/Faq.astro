@@ -3,83 +3,111 @@ import "../styles/global.css";
 ---
 
 <script>
-   const container = document.getElementsByClassName('content-box');
-   for(let i = 0;i < container.length;i++){
-    container[i].addEventListener('click', function(){
-        const isOpen = this.classList.contains('active');
-        for(let j = 0;j < container.length;j++){
-            container[j].classList.remove('active')
-        }
-        if(!isOpen){
-            this.classList.add('active');
-        }
-    })
-   }
+    const containers = document.querySelectorAll(".content-box");
+
+    // Toggle class "active" pada elemen yang di klik
+    containers.forEach((container) => {
+        container.addEventListener("click", () => {
+            container.classList.toggle("active");
+
+            // Cek jika elemen lain aktif, jika ya hapus class "active"
+            containers.forEach((openContainer) => {
+                if (openContainer !== container) {
+                    openContainer.classList.remove("active");
+                }
+            });
+        });
+    });
 </script>
 
-<header class="title">
-    <span></span>
-    <h1>FAQ</h1>
-    <span class="kanan"></span>
-</header>
-<section class="container">
-    <div class="content-box">
-        <h1 class="qna col-2">Ada berapa divisi dalam ukm himakom</h1>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid animi eaque molestias, inventore officiis ipsam minima. Quae nobis magni ipsa voluptatem asperiores nesciunt, voluptas, ratione, aperiam sunt culpa perferendis.</p>
+<section class="faq">
+    <header class="title">
+        <span></span>
+        <h1>FAQ</h1>
+        <span></span>
+    </header>
+    <div class="container">
+        <div class="content-box">
+            <h1 class="qna">Ada berapa divisi dalam ukm himakom</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="content-box">
-        <h1 class="qna col-2">ada kegiatan apa saja di ukm himakom?</h1>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid animi eaque molestias, inventore officiis ipsam minima. Quae nobis magni ipsa voluptatem asperiores nesciunt, voluptas, ratione, aperiam sunt culpa perferendis.</p>
+        <div class="content-box">
+            <h1 class="qna">ada kegiatan apa saja di ukm himakom?</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="content-box">
-        <h1 class="qna col-2">sejarah himakom?</h1>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid animi eaque molestias, inventore officiis ipsam minima. Quae nobis magni ipsa voluptatem asperiores nesciunt, voluptas, ratione, aperiam sunt culpa perferendis.</p>
+        <div class="content-box">
+            <h1 class="qna">sejarah himakom?</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="content-box">
-        <h1 class="qna col-2">benefit ikut himakom?</h1>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid animi eaque molestias, inventore officiis ipsam minima. Quae nobis magni ipsa voluptatem asperiores nesciunt, voluptas, ratione, aperiam sunt culpa perferendis.</p>
+        <div class="content-box">
+            <h1 class="qna">benefit ikut himakom?</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
-
     header {
-    text-align: center;
+        text-align: center;
     }
 
     .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 183px;
-     }
-
-     .kanan {
-        /*  */
-     }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 183px;
+    }
 
     .title span {
-    background-color: #730000;
-    width: 10rem;
-    height: 1rem;
-    border-radius: 5px;
-     }
+        background-color: #730000;
+        width: 10rem;
+        height: 1rem;
+        border-radius: 5px;
+    }
 
-     .container .content-box {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 4rem;
+    }
+    .container .content-box {
         position: relative;
-        margin-top: 10px;
-        width: 776px;
-        margin-left: 275px;
-     }
-     
+    }
+
     .container .content-box .qna {
         position: relative;
         background: #730000;
@@ -90,16 +118,16 @@ import "../styles/global.css";
     }
 
     .container .content-box .qna::before {
-        content: '+';
+        content: "+";
         position: absolute;
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
         font-size: 1.5em;
     }
-    
-    .container .content-box.active .qna::before{
-        content: '-';
+
+    .container .content-box.active .qna::before {
+        content: "-";
     }
 
     .container .content-box .content {
@@ -108,29 +136,21 @@ import "../styles/global.css";
         height: 0;
         overflow: hidden;
         transition: 0.5s;
-        overflow-y: auto;
-        border-radius: 10px;;
+        overflow-y: hidden;
+        border-radius: 10px;
     }
 
     .container .content-box.active .content {
         height: 100px;
         padding: 10px;
     }
-    section {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-   }
-    [class*='col-']{
-   }
 
-   @media only screen and (min-width:900px){
-    .col-1{
-        gap: 10px;
-    };
-    .container .content-box {
-        margin-left: 0px;
+    @media only screen and (min-width: 900px) {
+        .col-1 {
+            gap: 10px;
+        }
+        .container .content-box {
+            margin-left: 0px;
+        }
     }
-   }
-
 </style>
