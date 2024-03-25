@@ -2,180 +2,273 @@
 import "../styles/global.css";
 ---
 
-<footer class="footer">
-    <div class="footer-left">
-        <div class="branding">
-            <img src="logo.png" alt="logo-himakom" />
-            <span><b>HIMAKOM</b></span>
+<footer>
+    <div class="main-content">
+        <div class="footer-left">
+            <a href="#" class="branding">
+                <img src="logo.png" alt="Logo Himakom" />
+                <span>HIMAKOM</span>
+            </a>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.2338685282118!2d108.52996654808523!3d-6.712630981225655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee2197888043d%3A0x6e3589ac1bc43faf!2sComputer%20Science%20Polytechnic%20Cirebon!5e0!3m2!1sen!2sid!4v1711136290472!5m2!1sen!2sid"
+                    width="320"
+                    height="180"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4677377724743!2d108.52867370943227!3d-6.712630893255126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee2197888043d%3A0x6e3589ac1bc43faf!2sStikom%20-%20Poltek%20Cirebon!5e0!3m2!1sid!2sid!4v1710563678075!5m2!1sid!2sid"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer-mid">
+            <span>Kontak</span>
+            <form class="contact">
+                <div class="contact-row">
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="nama" placeholder="Nama" />
+                </div>
+                <textarea name="pesan" placeholder="Masukkan pesan anda disini"
+                ></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+        <div class="footer-right">
+            <div class="left-links">
+                <a href="#">Home</a>
+                <a href="#">Artikel</a>
+                <a href="#">Galeri</a>
+            </div>
+            <div class="right-links">
+                <span>About</span>
+                <div class="child-links">
+                    <a href="#">Profil</a>
+                    <a href="#">Generasi</a>
+                    <a href="#">Anggota</a>
+                </div>
+                <span>Divisi</span>
+                <div class="child-links">
+                    <a href="#">Program</a>
+                    <a href="#">Jaringan</a>
+                    <a href="#">Desain</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="footer-mid">
-        <form>
-            <textarea rows="4" cols="50" class="nama" placeholder="nama"
-            ></textarea>
-            <textarea rows="4" cols="50" class="pesan" placeholder="pesan"
-            ></textarea>
-        </form>
-    </div>
-    <div class="footer-right">
-        <ul class="link-left">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ARTIKEL</a></li>
-            <li><a href="#">GALERI</a></li>
-        </ul>
-        <ul class="link-right">
-            <li>
-                <a href="#">DIVISI</a>
-                <ul class="drop-div">
-                    <li><a href="#">PROGRAM</a></li>
-                    <li><a href="#">DESAIN</a></li>
-                    <li><a href="#">JARINGAN</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">ABOUT</a>
-                <ul class="drop-about">
-                    <li><a href="#">PROFIL</a></li>
-                    <li><a href="#">GENERASI</a></li>
-                </ul>
-            </li>
-        </ul>
+    <div class="copyright">
+        <p>&copy Copyright 2024 - Himakom Stikom Poltek Cirebon</p>
+        <div class="socials">
+            <a href="#"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    ><path
+                        d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"
+                    ></path></svg
+                ></a
+            >
+            <a href="#"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    ><path
+                        d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"
+                    ></path></svg
+                ></a
+            >
+            <a href="#"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    ><path
+                        d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z"
+                    ></path><circle cx="11.994" cy="11.979" r="3.003"
+                    ></circle></svg
+                ></a
+            >
+            <a href="#"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    ><path
+                        d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+                    ></path></svg
+                ></a
+            >
+        </div>
     </div>
 </footer>
 
 <style>
-    .footer {
+    footer {
         background-color: var(--neutral-secondary);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    footer div,
+    footer a {
+        text-decoration: none;
         color: var(--neutral-primary);
     }
 
-    .footer-left img {
-        height: 68px;
-        width: 65px;
-        margin: 5px;
-        top: 600px;
-        left: 120px;
+    footer .main-content {
+        display: grid;
+        line-height: normal;
+        place-items: center;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 2fr 1fr;
+        padding: 0.5rem 2rem;
     }
 
+    /* FOOTER KIRI START */
     .footer-left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        background-color: var(--neutral-secondary);
-        padding: 20px;
+        display: grid;
+        place-items: center;
+        gap: 0.5rem;
     }
 
     .footer-left .branding {
         display: flex;
-        align-items: center;
         justify-content: center;
-        background-color: var(--neutral-secondary);
-    }
-
-    .footer-left span {
-        padding: 6px;
         align-items: center;
+        gap: 1rem;
+    }
+    .branding img {
+        width: 54px;
+        aspect-ratio: 1;
+    }
+    .branding span {
         font-size: 40px;
-        color: var(--neutral-primary);
-        font-family: Poppins;
+        font-weight: 700;
     }
+    /* FOOTER KIRI END */
 
-    .map iframe {
-        width: 300px;
-        height: 200px;
-        padding: 5px;
-    }
+    /* FOOTER TENGAH START */
 
     .footer-mid {
         display: flex;
-        background-color: rgb(0, 0, 0);
-        justify-content: col;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .footer-mid form {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .footer-mid span {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .footer-mid form.contact {
+        width: 100%;
         display: flex;
-        gap: 10px;
-        box-sizing: cover;
-        padding: 25px 5px 15px 5px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 
-    .footer-mid form .nama {
-        text-align: justify;
-        text-indent: 10px;
-        width: 600px;
-        height: 50px;
+    form.contact * {
+        border: none;
         resize: none;
-        font-size: 1rem;
     }
 
-    .footer-mid form .pesan {
-        text-align: justify;
-        text-indent: 10px;
-        margin-top: 10px;
-        resize: none;
-        height: 200px;
-        font-size: 1rem;
+    form.contact > *:not(.contact-row) {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 5px;
+        gap: 0.5rem;
     }
+
+    form.contact .contact-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .contact-row input {
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    form.contact textarea {
+        height: 5rem;
+    }
+
+    form.contact button {
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            background-color: var(--primary);
+            color: var(--neutral-primary);
+        }
+    }
+
+    /* FOOTER TENGAH END */
+
+    /* FOOTER KANAN START */
 
     .footer-right {
-        background-color: var(--neutral-secondary);
         display: flex;
+        gap: 1rem;
+    }
+
+    .footer-right div {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
-    .footer-right .link-left,
-    .footer-right .link-right {
-        text-decoration: none;
-        list-style: none;
-        padding: 10px;
-        text-align: left;
-        margin: 25px 10px;
+    .footer-right .left-links {
+        height: fit-content;
     }
 
-    .link-left a,
-    .link-right a {
-        text-decoration: none;
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: var(--neutral-primary);
-        padding: 3px;
+    .footer-right a {
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            color: var(--accent);
+            fill: var(--accent);
+        }
     }
 
-    .drop-about,
-    .drop-div {
-        display: none;
-        position: absolute;
-        border: solid var(--neutral-secondary) 1px;
-        list-style: none;
-        padding: 3px 4px;
-        background-color: red;
+    .left-links a,
+    .footer-right span {
+        font-size: 1.5em;
+        font-weight: 600;
     }
 
-    .drop-about a,
-    .drop-div a {
-        text-decoration: none;
-        color: var(--neutral-primary);
-        font-size: 1rem;
+    .left-links {
+        text-align: right;
     }
 
-    .link-right li:hover .drop-about,
-    .link-right li:hover .drop-div {
-        display: block;
+    .child-links {
+        font-size: 1.2em;
+    }
+
+    /* FOOTER KANAN END */
+
+    /* SECTION COPYRIGHT */
+    .copyright {
+        color: #ddd;
+        background-color: #2a2424;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+    .copyright svg {
+        fill: #ddd;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            fill: var(--primary);
+        }
     }
 </style>
