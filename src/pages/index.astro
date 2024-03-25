@@ -1,7 +1,7 @@
 ---
+import "../styles/global.css";
 import HomeLayout from "../layouts/HomeLayout.astro";
 import Navbar from "../components/Navbar.astro";
-import "../styles/global.css";
 import Carousel from "../components/Carousel.astro";
 import VisiMisi from "../components/VisiMisi.astro";
 import Divisi from "../components/Divisi.astro";
@@ -11,8 +11,8 @@ import Faq from "../components/Faq.astro";
 ---
 
 <HomeLayout>
+  <Navbar />
   <header>
-    <Navbar />
     <Carousel />
   </header>
   <main>
@@ -20,8 +20,8 @@ import Faq from "../components/Faq.astro";
     <Divisi />
     <Generasi />
     <Faq />
-    <Footer />
   </main>
+  <Footer />
 </HomeLayout>
 
 <style>
