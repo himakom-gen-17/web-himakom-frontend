@@ -2,7 +2,7 @@
 const { pageName = "Home" } = Astro.props;
 ---
 
-<html lang="en">
+<html data-theme="light" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -14,3 +14,11 @@ const { pageName = "Home" } = Astro.props;
     <slot />
   </body>
 </html>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+</style>

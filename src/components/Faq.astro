@@ -1,3 +1,156 @@
 ---
 import "../styles/global.css";
 ---
+
+<script>
+    const containers = document.querySelectorAll(".content-box");
+
+    // Toggle class "active" pada elemen yang di klik
+    containers.forEach((container) => {
+        container.addEventListener("click", () => {
+            container.classList.toggle("active");
+
+            // Cek jika elemen lain aktif, jika ya hapus class "active"
+            containers.forEach((openContainer) => {
+                if (openContainer !== container) {
+                    openContainer.classList.remove("active");
+                }
+            });
+        });
+    });
+</script>
+
+<section class="faq">
+    <header class="title">
+        <span></span>
+        <h1>FAQ</h1>
+        <span></span>
+    </header>
+    <div class="container">
+        <div class="content-box">
+            <h1 class="qna">Ada berapa divisi dalam ukm himakom</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
+        </div>
+        <div class="content-box">
+            <h1 class="qna">ada kegiatan apa saja di ukm himakom?</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
+        </div>
+        <div class="content-box">
+            <h1 class="qna">sejarah himakom?</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
+        </div>
+        <div class="content-box">
+            <h1 class="qna">benefit ikut himakom?</h1>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium aliquid animi eaque molestias, inventore
+                    officiis ipsam minima. Quae nobis magni ipsa voluptatem
+                    asperiores nesciunt, voluptas, ratione, aperiam sunt culpa
+                    perferendis.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    header {
+        text-align: center;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 183px;
+    }
+
+    .title span {
+        background-color: var(--primary);
+        width: 10rem;
+        height: 1rem;
+        border-radius: 5px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 4rem;
+    }
+    .container .content-box {
+        position: relative;
+    }
+
+    .container .content-box .qna {
+        position: relative;
+        background: var(--primary);
+        color: var(--neutral-primary);
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .container .content-box .qna::before {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+    }
+
+    .container .content-box.active .qna::before {
+        content: "-";
+    }
+
+    .container .content-box .content {
+        position: relative;
+        background: pink;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: hidden;
+        border-radius: 10px;
+    }
+
+    .container .content-box.active .content {
+        height: 100px;
+        padding: 10px;
+    }
+
+    @media only screen and (min-width: 900px) {
+        .col-1 {
+            gap: 10px;
+        }
+        .container .content-box {
+            margin-left: 0px;
+        }
+    }
+</style>
